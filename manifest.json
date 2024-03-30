@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "다모앙 회원 메모",
+    "description": "다모앙 사이트 사용자 메모용 확장 프로그램입니다.\n이 확장 프로그램은 다모앙의 메모 기능이 도입될 때까지 제공됩니다.",
+    "version": "1.0",
+    "permissions": ["storage", "contextMenus"],
+    "content_scripts": [
+        {
+        "matches": ["*://damoang.net/*", "*://*.damoang.net/*"],
+        "js": ["contentScript.js"]
+        }
+    ],
+    "icons": {
+        "128": "icons/icon128.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    }
+}
